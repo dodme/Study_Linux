@@ -1,0 +1,12 @@
+Shell Script 예제
+
+#!/bin/bash
+//및에있는 코드들이 bash를 사용할것이기때문에 해당사항을 미리 알려주는 명령
+if ! [ -d bak ]; then
+//만약 bak라는 디렉토리가 없다면
+	mkdir bak
+//bak라는 디렉토리를 만들어라
+fi
+//if문을 끝내는 명령어
+cp *.log bak
+//log를 확장자로 가지는 모든 파일들을 bak라는 디렉토리에 저장한다
