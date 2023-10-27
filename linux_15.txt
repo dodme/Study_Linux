@@ -1,0 +1,8 @@
+컴퓨터 구조
+
+                    가격   용량   속도
+Processor : cpu
+Memory : RAM        비쌈   낮음   높음
+Storage : SSD HDD   쌈     높음   낮음
+
+cpu가 동작할때는 굉장히 빠르기때문에 Storage의 동작속도로는 처리가 불가능하므로 프로그램을 읽어서 Memory에 적재를 시킨다. 그리고 Momory에 적재되어있는 프로그램을 cpu에서 읽어서 실행시킨다. 실행되고있지 않은 프로그램은 Memory에 적재되지 않음.
