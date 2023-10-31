@@ -1,0 +1,20 @@
+Daemon
+
+daemon이라는 프로그램은 항상 실행되고있다는 특징이 있다
+즉, ls, mkdir, rm등과같은 명령어들은 필요할때 켜고 끄는 프로그램들이기때문에 daemon이 아님
+
+예를들어 apache라는 서버를 사용하고싶을떈
+sudo apt-get install apache2로 apache를 설치하고
+cd /etc/init.d/ 를 사용해서 모든 daemon프로그램들이 속해있는 위치로 가서
+sudo service apache2 start 를 사용하면 apache서버를 켤수 있다
+ps aux | grep apache2 를 사용하면 현재 실행되고있는 목록중 apache2를 찾을수 있음
+sudo service apache2 stop 을 사용하면 apache서버가 꺼진다
+
+위와같이 daemon프로그램들은 service라는 명령을 통해 우회해서 켜고 꺼야한다
+
+만약 부팅이 됬을때 자동으로 daemon이 실행되고있어야한다면
+/etc위치로 가서
+CLI로 구동중이라면 rc3.d
+GUI로 구동중이라면 rc5.d로 들어간다
+ls -l을 실행했을때 프로그램 앞이 K로 시작되면 부팅되었을때 자동으로 실행되지 않는다는 의미이고 S로 시작되면 해당 프로그램은 자동으로 실행된다
+/etc/rc3.d의 위치에서 ./S02apache2를 입력해서 링크를 걸면 해당위치에 apache프로그램이 위치하고있지 않아도 부팅되었을때 자동으로 실행하게 해줄 수 있다
