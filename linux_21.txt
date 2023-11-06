@@ -1,0 +1,10 @@
+권한(Permission)
+
+유저가 특정한 파일이나 디렉토리에 대해서 어떠한일을 할수 있게 하거나 할수 없게 하는일을 권한을 지정한다고 한다
+읽기(Read), 쓰기(Write), 실행(Excute)
+
+-     | rw-   | r--   | r--   |  1 |  dodme dodme  | 385 | Oct 18 16:44 | linux_10.txt |
+type  | owner | group | other |    |  Owner group  | 
+      |      access mode      |
+      | r: read, w : write, x : excute
+      | 즉, 주인은 읽고 쓰기, 그룹은 읽기, 그외는 읽기의 권한을 가진다는 뜻 

@@ -1,0 +1,7 @@
+권한을 변경하는법
+
+chmod
+chmod 대상 더할지뺄지 어떤권한을 파일명.확장자
+예) 다른유저들의 읽기권한을 없애고싶다 : chmod o-r linux_1.txt
+그룹의 쓰기권한을 추가하고싶다 : chmod g+w linux_1.txt
+
