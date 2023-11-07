@@ -1,0 +1,14 @@
+chmod 사용법 정리
+
+chmod 옵션 모드 파일(여러개일경우 한칸 띄어서 입력)
+
+여러가지 권한을 한번에 변경하는 방법은 Octal modes를 참조
+ex) chmod 110 linux_1.txt	:	user와 group에게는 실행권한만 부여, other에게는 아무 권한도 부여하지 않음
+
+
+또 다른방법 예시
+chmod a+r linux_1.txt	:	linux_1.txt에 대해서 모든 사용자에게 읽기권한을 부여한다
+chmod a=rwx linux.txt	:	모든 사용자에게 rwx의 권한을 부여한다
+chmod a= linux_1.txt	:	모든 사용자에게 권한을 부여하지 않는다
+chmod a=rx linux_1.txt	:	모든 사용자에게 rx의 권한을 부여한다
+
