@@ -1,0 +1,27 @@
+웹서버
+
+아파치서버
+sudo apt-get update;
+sudo agp-get install apache2
+를 통해 설치한다
+
+sudo service apache2 start
+sudo service apache2 stop
+sudo service apache2 restart
+각각 아파치서버를 켜고 끄고 재부팅하는 명령어
+
+sudo apt-get install elinks
+elinks
+를 실행하면 웹사이트를 쉘환경에서도 실행할수 있지만 한글은 지원하지 않는다
+q를 누르면 빠져나올수 있음
+
+ip addr로 자신의 ip주소를 확인하고
+elinks http://ip주소/
+를 실행해서 apache서버가 제대로 켜졌는지 확인할수 있음
+
+자신의 컴퓨터 내에서 서버의 운영과 접속을 같이한다면 자기자신을 가리키는 ip주소인 127.0.0.1을 이용하거나 localhost를 이용해서
+elinks http://127.0.0.1/
+이나
+elinks http://localhost/
+로 자신의 ip주소를 몰라도 접속할수 있다
+
