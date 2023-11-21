@@ -1,0 +1,13 @@
+웹서버(Log)
+
+/var/log/apache2/ 경로에 access.log 파일과 error.log 파일이 있다
+
+access.log파일은 누군가 서버에 접속할때마다 파일의 끝에 해당 접속자의 정보를 추가한다
+그래서 실시간으로 확인하고싶을땐
+tail /var/log/apache2/access.log
+를 사용하면 /var/log/apache2/access.log의 끝에있는 정보를 출력한다
+tail -f /var/log/apache2/access.log
+를 사용하면 끝에있는 정보를 실시간으로 출력해준다
+
+error.log파일은 apache웹서버에 특정한 문제가 생겼을때 해당 문제를 저장하기때문에 해당 파일을 통해 문제를 확인하고 해결한다
+

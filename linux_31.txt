@@ -1,0 +1,18 @@
+원격제어 SSH
+
+SSH를 쓰기 위해서는 서버와 클라이언트구조가 필요하다
+원격제어를 하고자하는 대상인 컴퓨터에는 SSH 서버를 깔고, 서버가 깔려있는 컴퓨터를 제어하려고하는 사용자의 컴퓨터에는 SSH 클라이언트가 깔려있어야한다
+사용자가 클라이언트 컴퓨터에 명령을 입력하게되면 서버 컴퓨터를 제어한다
+이 관계는 웹서버와 웹브라우저와의 관계와 흡사하다
+
+sudo apt-get purge openssh-server openssh-clinet
+를 통해 openssh를 삭제할수 있지만 동시에 환경변수도 삭제되니 주의
+sudo apt-get install openssh-server openssh-client
+를 통해 openssh의 서버와 클라이언트를 설치할수 있다
+설치가 끝나면
+sudo service ssh start
+를 실행한다
+sudo ps aux | grep ssh
+를 통해 제대로 실행되고있는지 확인 가능
+
+
