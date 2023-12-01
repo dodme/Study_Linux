@@ -1,0 +1,17 @@
+RSA
+
+
+우리가 가지고있는 정보를 다른사람이 봤을때 알아볼수 없도록 특정 키를 이용해서 암호화 및 복호화할수 있는데 이때 암호화와 복호화에 같은 키를 사용하는방식을 대칭적인 방식이라고 부른다
+반대로 암호화할때는 private key를 이용하고 복호화할때는 public key를 이용하는식의 방식을 비대칭 암호화기법이라고 하는데 이중 대표적인것이 rsa기법이다
+
+ssh를 통해서 인증을 하면 거치게되는 과정
+하나의 컴퓨터에는 SSH Client, 다른 하나의 컴퓨터에는 SSH Server가 설치되어있다
+ssh client컴퓨터에는 private key, public key가 있고
+ssh server컴퓨터에는 public key의 정보가 추가되어있는 파일을 가지고있다
+이 말은 public key를 가지고있는 ssh client컴퓨터는 public key의 정보가 있는 ssh server컴퓨터에 접속할수 있다
+ssh client가 ssh server에 접속을 하면 ssh server는 ssh client에게 랜덤하게 생성된 키를 준다
+ssh client프로그램은 ssh디렉토리 안에서 id_rsa라는 이름의 파일을 찾아보고 그런 파일이 있다면 ssh server에서 받은 랜덤키를 rsa를 이용해서 함호화한다
+그후 ssh server에서는 암호화된 랜덤키를 자기가 가지고있는 public key의 정보를 가지고있는 파일을 이용해서 복호화한다
+만약 ssh server에서 보낸 랜덤키와 암호화되어 받은 키를 복호화한 결과가 같다면 신뢰할수 있는 사용자로 인식하고 로그인시켜준다
+
+
